@@ -1,0 +1,65 @@
+/* Advanced Dark-Themed Naruto Card (cleaned up) */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0d0d0d, #000);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  width: 340px;
+  height: 480px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background: url("https://www.jfabrics.cz/media/cache/original/5a3d1c893fce362.jpg") no-repeat center/cover;
+  box-shadow: 0 15px 40px rgba(255, 140, 0, 0.25);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid rgba(255, 140, 0, 0.6);
+}
+
+.card:hover {
+  transform: perspective(800px) rotateY(10deg) scale(1.05);
+  box-shadow: 0 25px 60px rgba(255, 140, 0, 0.7);
+  border-color: orange;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  transition: background 0.4s ease;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 26px;
+  color: orange;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.9);
+}
+
+.overlay p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: #eee;
+  line-height: 1.4;
+}
+
+.overlay .intro {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #bbb;
+}
